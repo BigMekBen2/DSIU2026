@@ -41,7 +41,7 @@ namespace SG
         public void HandleCameraRotation(float delta, float mouseXInput, float mouseYInput)
         {
             lookAngle += (mouseXInput * lookSpeed) / delta;
-            pivotAngle -= (mouseYInput * pivotSpeed * pivotSpeed) / delta; // could give user an accessibility option to swap the y axis controls
+            pivotAngle -= (mouseYInput * pivotSpeed) / delta; // could give user an accessibility option to swap the y axis controls
             pivotAngle = Mathf.Clamp(pivotAngle, minimumPivot, maximumPivot);
 
             Vector3 rotation = Vector3.zero;
